@@ -4,9 +4,53 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap" rel="stylesheet">
     </head>
 
     <body>
+        <header class="header">
+            <h1 class="title">ROCK PAPER SCISSORS</h1>
+        </header>
+
+        <main class="main">
+            <div class="scoreboard">
+                <h2 class="score-info" id="scoreInfo">First to 5 points wins!</h2>
+                <div class="score-container">
+                    <div class="score-box" id="playerScoreBox">
+                        <p class="score" id="playerScore">0</p>
+                        <p class="name" id="playerName">YOU</p>
+                    </div>
+                    <div class="score-box" id="computerScoreBox">
+                        <p class="score" id="computerScore">0</p>
+                        <p class="name" id="computerName">COM</p>
+                    </div>
+                </div>
+                <p class="play-again-message">Click anywhere to play again.</p>
+            </div>
+
+            <div class="hands-container">
+                <div class="player-hand-container">
+                    <img class="hand" id="playerHand" src="images/hands/rock.png">
+                </div>
+                <div class="computer-hand-container">
+                    <img class="hand" id="computerHand" src="images/hands/rock.png">
+                </div>
+            </div>
+
+            <div class="button-container">
+                <button class="gesture-btn" id="rockBtn">ROCK</button>
+                <button class="gesture-btn" id="paperBtn">PAPER</button>
+                <button class="gesture-btn" id="scissorsBtn">SCISSORS</button>
+            </div>
+        </main>
+
         <script src="rps.js"></script>
+
+        <footer class="footer">
+            &lt;&lt; Created by Bien &gt;&gt;
+        </footer>
     </body>
 </html>
