@@ -68,6 +68,7 @@ function updateScoreInfo(roundWinner, pScore, cScore) {
 function playRound(humanChoice) {
     playerHand.src = 'images/hands/rock.png';
     computerHand.src = 'images/hands/rock.png';
+   
     if (humanScore >= 5 || comScore >= 5) return;
 
     const computerChoice = getComputerChoice();
@@ -76,6 +77,7 @@ function playRound(humanChoice) {
 
     playerHand.classList.remove('animate-player');
     computerHand.classList.remove('animate-computer');
+    
     void playerHand.offsetWidth;
     void computerHand.offsetWidth;
 
@@ -99,7 +101,13 @@ function playRound(humanChoice) {
 
 function showPlayAgainMessage() {
     playAgainMsg.style.visibility = 'visible';
-    scoreInfo.textContent = "YOU WIN THE GAME!";
+
+    if(humanScore > comScore) {
+        scoreInfo.textContent = "YOU WIN THE GAME!";
+    } else {
+        scoreInfo.textContent = "COMPUTER WINS THE GAME!";
+    }
+
     document.body.addEventListener('click', restartGame, { once: true });
 }
 
